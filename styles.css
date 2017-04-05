@@ -2,10 +2,8 @@ body, html{
   height:100%;
 }
 body{
-  margin: 0px;
-  max-height: 1050px;
-  max-width: 1680px;
-  background-color:#444;
+  margin: 0px;  
+  overflow: hidden;
   font-size: 18px;
   background-image: url("assets/blinkystars.gif")
 }
@@ -59,7 +57,6 @@ body, a:link, a:visited, a:active{
   background-image: url("assets/bear.gif");
   width:235px;
   height: 300px;
-  animation: hide 2s;
 }
 
 @keyframes spin {
@@ -71,7 +68,7 @@ body, a:link, a:visited, a:active{
     50% {transform: scale(2,2);}
 }
 
-@keyframes hide {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(180deg);}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
