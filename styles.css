@@ -3,25 +3,75 @@ body, html{
 }
 body{
   margin: 0px;
+  max-height: 1050px;
+  max-width: 1680px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("assets/blinkystars.gif")
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton {
+  padding:5px 12px;
+  float:right;
+}
+.lineUpButton{
   padding:5px 12px;
   float:right;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  font-family: 'VT323', monospace;
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+}
+.blinky {
+  position:absolute;
+  background-image: url("assets/baby.gif");
+  width:150px;
+  height: 190px;
+} 
+.pop {
+  position:absolute;
+  background-image: url("assets/shark-cropped.gif");
+  width:250px;
+  height: 250px;
+  animation: grow 2s infinite;
+} 
+
+.twirl {
+  position:absolute;
+  background-image: url("assets/cnh.gif");
+  width: 150px;
+  height: 150px;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.shy {
+  position:absolute;
+  background-image: url("assets/bear.gif");
+  width:235px;
+  height: 300px;
+  animation: hide 2s;
+}
+
+@keyframes spin {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes grow {
+    50% {transform: scale(2,2);}
+}
+
+@keyframes hide {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
 }
